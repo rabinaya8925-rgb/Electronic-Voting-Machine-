@@ -19,6 +19,9 @@ Breadboard
 Jumper Wires
 Power Supply
 
+Circuit Diagram 
+
+
 ⚙️ Working Principle
 
 The voter selects a candidate by pressing the corresponding button.
@@ -39,4 +42,5 @@ RFID-based voter authentication
 Biometric verification
 EEPROM or SD card data storage
 IoT-based remote result monitoring
+
 
