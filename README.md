@@ -19,9 +19,6 @@ Breadboard
 Jumper Wires
 Power Supply
 
-Circuit Diagram 
-
-
 ⚙️ Working Principle
 
 The voter selects a candidate by pressing the corresponding button.
