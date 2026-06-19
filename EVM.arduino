@@ -1,0 +1,94 @@
+#include <LiquidCrystal.h>
+
+// LCD Pins: RS, E, D4, D5, D6, D7
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+
+// Push button pins
+const int candidate1 = 8;
+const int candidate2 = 9;
+const int candidate3 = 10;
+const int candidate4 = 11;
+const int resultButton = 12;
+
+// Vote counters
+int vote1 = 0;
+int vote2 = 0;
+int vote3 = 0;
+int vote4 = 0;
+
+void setup() {
+  pinMode(candidate1, INPUT_PULLUP);
+  pinMode(candidate2, INPUT_PULLUP);
+  pinMode(candidate3, INPUT_PULLUP);
+  pinMode(candidate4, INPUT_PULLUP);
+  pinMode(resultButton, INPUT_PULLUP);
+
+  lcd.begin(16, 2);
+  lcd.print("Electronic");
+  lcd.setCursor(0, 1);
+  lcd.print("Voting Machine");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+
+  // Candidate 1 vote
+  if (digitalRead(candidate1) == LOW) {
+    vote1++;
+    lcd.clear();
+    lcd.print("Vote Cast For");
+    lcd.setCursor(0, 1);
+    lcd.print("Candidate 1");
+    delay(1000);
+  }
+
+  // Candidate 2 vote
+  if (digitalRead(candidate2) == LOW) {
+    vote2++;
+    lcd.clear();
+    lcd.print("Vote Cast For");
+    lcd.setCursor(0, 1);
+    lcd.print("Candidate 2");
+    delay(1000);
+  }
+
+  // Candidate 3 vote
+  if (digitalRead(candidate3) == LOW) {
+    vote3++;
+    lcd.clear();
+    lcd.print("Vote Cast For");
+    lcd.setCursor(0, 1);
+    lcd.print("Candidate 3");
+    delay(1000);
+  }
+
+  // Candidate 4 vote
+  if (digitalRead(candidate4) == LOW) {
+    vote4++;
+    lcd.clear();
+    lcd.print("Vote Cast For");
+    lcd.setCursor(0, 1);
+    lcd.print("Candidate 4");
+    delay(1000);
+  }
+
+  // Show results
+  if (digitalRead(resultButton) == LOW) {
+    lcd.clear();
+    lcd.print("C1:");
+    lcd.print(vote1);
+    lcd.print(" C2:");
+    lcd.print(vote2);
+
+    delay(3000);
+
+    lcd.clear();
+    lcd.print("C3:");
+    lcd.print(vote3);
+    lcd.print(" C4:");
+    lcd.print(vote4);
+
+    delay(3000);
+  }
+}
