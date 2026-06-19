@@ -19,4 +19,14 @@ The voter selects a candidate by pressing the corresponding button.
 The Arduino registers and counts the vote.
 The LCD displays the voting status.
 After the voting process is completed, the total votes for each candidate are displayed.
-Circuit diagram
+🚀 Applications
+School and college elections
+Demonstration of electronic voting systems
+Embedded systems learning
+Engineering mini and final-year projects
+🔮 Future Enhancements
+RFID-based voter authentication
+Biometric verification
+EEPROM or SD card data storage
+IoT-based remote result monitoring
+
